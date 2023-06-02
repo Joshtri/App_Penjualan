@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAF3826D-3EF9-4475-9550-14214E41843D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App_Penjualan</RootNamespace>
+    <AssemblyName>App_Penjualan</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppMenu.Designer.cs">
+      <DependentUpon>AppMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseTambah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseTambah.Designer.cs">
+      <DependentUpon>BaseTambah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarang\DaftarBarangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarang\DaftarBarangForm.Designer.cs">
+      <DependentUpon>DaftarBarangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarang\TambahBarangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarang\TambahBarangForm.Designer.cs">
+      <DependentUpon>TambahBarangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategori\DaftarKategoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategori\DaftarKategoriForm.Designer.cs">
+      <DependentUpon>DaftarKategoriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategori\TambahKategoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategori\TambahKategoriForm.Designer.cs">
+      <DependentUpon>TambahKategoriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPenjualan\MenuPenjualanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenjualan\MenuPenjualanForm.Designer.cs">
+      <DependentUpon>MenuPenjualanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_View.Designer.cs">
+      <DependentUpon>Login_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppMenu.resx">
+      <DependentUpon>AppMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseTambah.resx">
+      <DependentUpon>BaseTambah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarang\DaftarBarangForm.resx">
+      <DependentUpon>DaftarBarangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBarang\TambahBarangForm.resx">
+      <DependentUpon>TambahBarangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategori\DaftarKategoriForm.resx">
+      <DependentUpon>DaftarKategoriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategori\TambahKategoriForm.resx">
+      <DependentUpon>TambahKategoriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjualan\MenuPenjualanForm.resx">
+      <DependentUpon>MenuPenjualanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_View.resx">
+      <DependentUpon>Login_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\login_button.png" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Inventory.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
